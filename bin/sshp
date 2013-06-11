@@ -10,7 +10,9 @@ if ARGV.any?
     puts "Executing #{command}"
     exec command
   end
+  puts "No alias found"
+else
+  puts "Usage: sshp name [ssh options]"
 end
-puts "No alias found"
 puts "SSHP Version #{SSHP::VERSION}"
 

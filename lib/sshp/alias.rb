@@ -8,7 +8,7 @@ module SSHP
     end
 
     def self.all
-      @all ||= YAML.load File.open filename, "r"
+      @all ||= YAML.load(File.open filename, "r")["aliases"]
     rescue Errno::ENOENT
       @all = {}
     end
@@ -20,7 +20,7 @@ module SSHP
     end
 
     def self.save
-      File.open(filename, "w") { |f| f.write all.to_yaml }
+      File.open(filename, "w") { |f| f.write ({ "aliases" => all }).to_yaml }
     end
   end
 end

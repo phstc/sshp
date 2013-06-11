@@ -8,7 +8,10 @@ require File.expand_path(File.join(File.dirname(__FILE__), %w[.. lib sshp alias]
 if ARGV.any?
   SSHP::Alias.create_or_update_by_name ARGV[0], ARGV[1..-1].join(" ")
   puts "The alias #{ARGV[0]} was succefully saved"
+else
+  puts "Usage: sshp-alias name [ssh options]"
 end
+
 puts "List of available aliases"
 SSHP::Alias.all.each_pair do |name, value|
   puts "#{name}: #{value} (To run `sshp #{name}`)"
