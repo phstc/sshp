@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require File.expand_path(File.join(File.dirname(__FILE__), %w[.. lib sshp]))
+require File.expand_path(File.join(File.dirname(__FILE__), %w[.. lib sshp version]))
+require File.expand_path(File.join(File.dirname(__FILE__), %w[.. lib sshp alias]))
+
+if ARGV.any?
+  if args = SSHP::Alias.all[ARGV[0]]
+    command = "ssh #{args} #{ARGV[1..-1].join(" ")}"
+    puts "Executing #{command}"
+    exec command
+  end
+end
+puts "No alias found"
+puts "SSHP Version #{SSHP::VERSION}"
+
