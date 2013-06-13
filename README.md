@@ -33,3 +33,23 @@ sshp u
 ## .sshp
 
 All aliases will be saved at `~/.sshp`.
+
+## ssh_config
+
+Remember that you can also use [ssh_config](http://linux.die.net/man/5/ssh_config) for many cases in place of sshp.
+
+```sh
+# ~/.ssh/config
+Host u
+    HostName hostname.com
+    User ubuntu
+    IdentityFile ~/keys/my_key.pem
+```
+
+Then
+
+```sh
+ssh u
+```
+
+I created sshp (just for fun) because I usually connect to many servers which the hostname change frequently but the credentials are the same. Have a look at ["Simplify Your Life With an SSH Config File"](http://nerderati.com/2011/03/simplify-your-life-with-an-ssh-config-file/) it is a well detailed post about ssh_config.
