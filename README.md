@@ -8,7 +8,7 @@ gem install sshp
 
 ## Usage
 
-To save an alias without hostname.
+To save an alias without hostname:
 
 ```sh
 sshp-alias u -i ~/keys/my_key.pem -l ubuntu
@@ -19,7 +19,7 @@ Then
 ```sh
 sshp u hostname.com
 ```
-To save an alias with hostname.
+To save an alias with hostname:
 
 ```sh
 sshp-alias u -i ~/keys/my_key.pem -l ubuntu hostname.com
@@ -52,4 +52,4 @@ Then
 ssh u
 ```
 
-I created sshp (just for fun) because I usually connect to many servers which the hostname change frequently but the credentials are the same. Have a look at ["Simplify Your Life With an SSH Config File"](http://nerderati.com/2011/03/simplify-your-life-with-an-ssh-config-file/) it is a well detailed post about ssh_config.
+Have a look at ["Simplify Your Life With an SSH Config File"](http://nerderati.com/2011/03/simplify-your-life-with-an-ssh-config-file/) it is a well detailed post about ssh_config.
