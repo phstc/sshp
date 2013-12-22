@@ -30,7 +30,7 @@ Then
 sshp u
 ```
 
-## .sshp
+### .sshp
 
 All aliases will be saved at `~/.sshp`.
 
@@ -53,3 +53,11 @@ ssh u
 ```
 
 Have a look at ["Simplify Your Life With an SSH Config File"](http://nerderati.com/2011/03/simplify-your-life-with-an-ssh-config-file/) it is a well detailed post about ssh_config.
+
+
+## sshp vs ssh_config
+
+The difference between sshp vs ssh_config is that using sshp you can save the aliases without `Host` and `HostName`, you can save only the credentianls, which is usefull when you have multiple servers/hosts using the same credentianls i.e. `sshp u host-a`, `sshp u host-b` etc.
+
+
+
